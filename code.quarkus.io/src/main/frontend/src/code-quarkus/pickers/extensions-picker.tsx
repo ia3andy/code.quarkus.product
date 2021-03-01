@@ -80,9 +80,9 @@ function StatusTag(props: { status?: string }) {
       let conf = statusConfig[props.status];
       if(!!conf) {
         if(!!conf.href) {
-          return <a {...conf} className={`extension-tag ${props.status}`}>{props.status}</a>
+          return <a {...conf} className={`extension-tag ${props.status.toLowerCase()}`}>{props.status}</a>
         } else {
-          return <span {...conf} className={`extension-tag ${props.status}`}>{props.status}</span>
+          return <span {...conf} className={`extension-tag ${props.status.toLowerCase()}`}>{props.status}</span>
         }
       }
       return <span className="extension-tag custom">{props.status}</span>;
